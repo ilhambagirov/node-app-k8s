@@ -1,0 +1,25 @@
+// # Jenkinsfile
+// pipeline {
+//     agent 'any'
+
+//      environment {
+//        MONGODB_URI = credentials('MONGODB_URI')
+//        DB_NAME = credentials('DB_NAME')
+//     }
+
+//     stages {
+//         stage('Form .env file') {
+//             steps {
+//                 script {
+//                     sh "echo 'MONGODB_URI=${MONGODB_URI}' > .env"
+//                      sh "echo 'MONGODB_URI=${DB_NAME}' >> .env"
+//                 }
+//             }
+//         }
+//     }
+// } 
+// if [[ $(docker ps -a | grep simple-node-app_webapp | wc -l) -gt 0 ]]; then
+//   docker stop $(docker ps -a | grep simple-node-app_webapp | awk '{print $1}')
+//   docker rm $(docker ps -a | grep simple-node-app_webapp | awk '{print $1}') || true
+// fi
+// docker-compose up -d --build --remove-orphans
