@@ -1,0 +1,10 @@
+---
+- hosts: ansible
+  tasks:
+    - name: create docker image
+      command: docker build -t ilhambb/nodeapponk8s:latest .
+      args:
+        chdir: /home/ansadmin/classroom-app
+
+    - name: push to hub
+      command: docker push ilhambb/nodeapponk8s:latest

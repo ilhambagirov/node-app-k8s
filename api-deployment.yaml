@@ -5,7 +5,7 @@ metadata:
   labels:
     app: webapp
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: webapp
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: webapp
-          image: ilhambb/nodeappwithansible:latest
+          image: ilhambb/nodeapponk8s:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
