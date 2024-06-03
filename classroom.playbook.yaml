@@ -1,0 +1,17 @@
+---
+- hosts: kubernetes
+  tasks: 
+
+  - name: create docker image
+    command: kubectl apply -f ./mongo-config.yaml
+
+  - name: create docker image
+    command: kubectl apply -f ./mongo-secret.yaml
+
+  - name: create docker image
+    command: kubectl apply -f ./api-deployment.yaml
+
+  - name: create docker image
+    command: kubectl apply -f ./mongo-deployment.yaml
+    args:
+     chdir: /home/ansadmin/simple-node-app1
